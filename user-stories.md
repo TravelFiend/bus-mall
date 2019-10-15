@@ -1,4 +1,4 @@
-##Marketing Research
+## Marketing Research
 ---
 
 **Ilayda**
@@ -6,7 +6,7 @@
 Ilayda is on the marketing research team.  She wants to know how many times an image has been displayed, and what percentage of times an item was chosen.  She will be using this information to determine which products will be inculded in the catalogue when printing time comes.  
 
 ---
-##Focus Group Participants
+## Focus Group Participants
 ---
 
 **Sabrina**
