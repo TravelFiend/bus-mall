@@ -1,16 +1,16 @@
 ## What pages will need to be created?
 
-- Html page with basic page structure
+- Html page with basic page structure ***
 - CSS stylesheet
 - CSS reset
-- Data
+- Data ***
 - Tests
-- Functions
+- Functions ---
 - Function implementation
 
 ## What data will need to be saved, updated, and when?
 
-- number ot times the 3 images are shown
+- number of times the 3 images are shown
 - number of times an image appears
 - number of times a particular product has been selected
 - whether or not an image was just shown
@@ -18,6 +18,7 @@
 
 ## What variables will need to be used to track data?
 
+- Make a class with duplicated array as value
 - Product ID
 - Random product
 - display 3 images on the page - need product ID, random picture picker
