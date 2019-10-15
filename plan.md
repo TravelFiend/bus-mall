@@ -18,10 +18,10 @@
 
 ## What variables will need to be used to track data?
 
-- Make a class with duplicated array as value
+- Make a class with duplicated array as value ***
 - Product ID
-- Random product
-- display 3 images on the page - need product ID, random picture picker
+- Random product ***
+- display 3 images on the page - random picture picker ***
 - collect user data
 - number of rounds remaining
 

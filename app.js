@@ -15,6 +15,7 @@ while (randomProductSrc3 === randomProductSrc1 || randomProductSrc3 === randomPr
     randomProductSrc3 = productArray.getRandomProduct().image;
 }
 
+// generate 3 differing random images on page
 imageSlots.forEach((slot, i) => {
     if (i === 0){
         slot.src = randomProductSrc1;
