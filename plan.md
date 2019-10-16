@@ -2,7 +2,7 @@
 
 - Html page with basic page structure ***
 - CSS stylesheet
-- CSS reset
+- CSS reset  ***
 - Data ***
 - Tests
 - Functions ---
