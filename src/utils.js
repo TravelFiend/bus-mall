@@ -4,6 +4,7 @@ export const findById = (items, id) => {
             return item;
         }
     });
+    return null;
 };
 
 export const incrementShowCount = () => {

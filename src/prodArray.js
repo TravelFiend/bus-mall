@@ -45,15 +45,17 @@ export default class ProductArray {
                 image.src = randomProduct2.image;
                 myRadios[1].value = randomProduct2.id;
                 const found = findById(countsArray, randomProduct2.id);
-                if (found) {
+                console.log(found);
+                if (found === null) {
+                    countsArray.push({
+                        id: randomProduct2.id,
+                        showCount: 1,
+                        clickCount: 0
+                    });
+                } else {
                     found.showCount++;
                     return;
                 }
-                countsArray.push({
-                    id: randomProduct2.id,
-                    showCount: 1,
-                    clickCount: 0
-                });
             } else if (i === 2) {
                 image.src = randomProduct3.image;
                 myRadios[2].value = randomProduct3.id;
@@ -67,10 +69,7 @@ export default class ProductArray {
                     showCount: 1,
                     clickCount: 0
                 });
-            } else {
-                return;
             }
         });
-        
     }
 }
