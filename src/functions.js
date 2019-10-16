@@ -6,5 +6,5 @@ export class ProductArray {
     getRandomProduct() {
         const randomProduct = this.products[Math.floor(Math.random() * 20)];
         return randomProduct;
-    }
+    }   
 }

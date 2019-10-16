@@ -1,0 +1,7 @@
+input {
+    display: none;
+}
+
+input:checked+.products {
+    border: 7px solid rgb(38, 75, 38);
+}
