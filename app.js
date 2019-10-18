@@ -5,6 +5,7 @@ import { renderLines } from './src/utils.js';
 const productArray = new ProductArray(productData);
 const myRadios = document.querySelectorAll('input');
 const images = document.getElementById('images');
+// const pics = document.getElementsByTagName('img');
 
 export let countsArray = [];
 let triesLeft = 25;
@@ -24,6 +25,7 @@ myRadios.forEach(radio => {
         triesLeft--;
         if (triesLeft === 0) {
             images.classList.add('hidden');
+            // pics.classList.add('hidden');
             renderLines();
         }
     });

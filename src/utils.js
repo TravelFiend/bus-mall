@@ -33,12 +33,12 @@ export const renderLines = () => {
         if (i < 10){
             const li = document.createElement('li');
             li.className = 'listItem';
-            li.textContent = `${object.name}: Shown count: ${object.showCount} Times selected:  ${object.clickCount}`;
+            li.textContent = `${object.name}: -- Shown count: ${object.showCount} -- Times selected:  ${object.clickCount}`;
             div1.appendChild(li);
         } else {
             const li = document.createElement('li');
             li.className = 'listItem';
-            li.textContent = `${object.name}: Shown count: ${object.showCount} Times selected:  ${object.clickCount}`;
+            li.textContent = `${object.name}: -- Shown count: ${object.showCount} -- Times selected:  ${object.clickCount}`;
             div2.appendChild(li);
         }
         
