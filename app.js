@@ -6,9 +6,6 @@ const myRadios = document.querySelectorAll('input');
 
 export let countsArray = [];
 
-
-// get 3 differing image sources
-
 productArray.randomPicGenerator();
 
 myRadios.forEach(radio => {
@@ -21,5 +18,3 @@ myRadios.forEach(radio => {
         productArray.randomPicGenerator();
     });
 });
-
-console.log(countsArray);
