@@ -10,7 +10,6 @@ export const makeChart = array => {
         shounts.push(product.showCount);
         clounts.push(product.clickCount);
     });
-    console.log(names, clounts, shounts);
     
     new Chart(ctx, {
         type: 'bar',
