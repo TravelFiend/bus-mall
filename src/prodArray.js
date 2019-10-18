@@ -39,23 +39,23 @@ export default class ProductArray {
                 countsArray.push({
                     id: randomProduct1.id,
                     showCount: 1,
-                    clickCount: 0
+                    clickCount: 0,
+                    name: randomProduct1.name
                 });
             } else if (i === 1) {
                 image.src = randomProduct2.image;
                 myRadios[1].value = randomProduct2.id;
                 const found = findById(countsArray, randomProduct2.id);
-                console.log(found);
-                if (found === null) {
-                    countsArray.push({
-                        id: randomProduct2.id,
-                        showCount: 1,
-                        clickCount: 0
-                    });
-                } else {
+                if (found) {
                     found.showCount++;
                     return;
                 }
+                countsArray.push({
+                    id: randomProduct2.id,
+                    showCount: 1,
+                    clickCount: 0,
+                    name: randomProduct2.name
+                });
             } else if (i === 2) {
                 image.src = randomProduct3.image;
                 myRadios[2].value = randomProduct3.id;
@@ -67,9 +67,11 @@ export default class ProductArray {
                 countsArray.push({
                     id: randomProduct3.id,
                     showCount: 1,
-                    clickCount: 0
+                    clickCount: 0,
+                    name: randomProduct3.name
                 });
             }
         });
     }
 }
+

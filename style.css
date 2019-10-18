@@ -1,7 +1,133 @@
+html, body {
+    height: auto;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: #090909;
+    font-size: 60px;
+    text-shadow: 0 0 10px #4B5043;
+}
+
+body {
+    background: #8DDBE0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    margin-top: 30px;
+    border: 3px solid #090909;
+    background: #9BC4BC;
+    border-radius: 30px;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    align-items: center;
+}
+
 input {
     display: none;
 }
 
 input:checked+.products {
-    border: 7px solid rgb(38, 75, 38);
+    border: 7px solid #8DDBE0;
+}
+
+#images {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #4B5043;
+    border: 3px solid #090909;
+    border-radius: 30px;
+    height: 90%;
+    width: 90%;
+}
+
+img {
+    border: 3px solid #090909;
+    border-radius: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.listItem {
+    width: 600px;
+}
+
+h2 {
+    font-family: sans-serif;
+    text-decoration: underline;
+    color: #090909;
+    font-size: 40px;
+    text-shadow: 0 0 10px #D3FFE9;
+    display: inline;
+    margin: 0 auto;
+}
+
+ul {
+    display: flex;
+    background: #D3FFE9;
+    border: 2px solid #090909;
+    padding: 30px 0;
+    border-radius: 20px;
+}
+
+li {
+    line-height: 30px;
+    font-size: 20px;
+    list-style: none;
+}
+
+.listBox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section {
+    text-align: center;
+}
+
+a {
+    background: #D3FFE9;
+    margin-top: 40px;
+    padding: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    border: 2px solid #090909;
+    border-radius: 20px;
+    font-family: sans-serif;
+    color: #090909;
+    box-shadow: inset -2px -2px 10px #090909;
+}
+
+canvas {
+    margin-top: 40px;
+    width: 80%;
+    height: 500px;
 }
