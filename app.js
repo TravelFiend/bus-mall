@@ -28,7 +28,6 @@ myRadios.forEach(radio => {
             canvas.classList.remove('hidden');
             main.classList.add('hidden');
             renderLines();
-            console.log(countsArray);
             makeChart(countsArray);
         }
     });
