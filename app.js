@@ -1,5 +1,6 @@
 import ProductArray from './src/prodArray.js';
 import productData from './data/products.js';
+import { renderLines } from './src/utils.js';
 
 const productArray = new ProductArray(productData);
 const myRadios = document.querySelectorAll('input');
@@ -23,7 +24,7 @@ myRadios.forEach(radio => {
         triesLeft--;
         if (triesLeft === 0) {
             images.classList.add('hidden');
+            renderLines();
         }
     });
 });
-
