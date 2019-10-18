@@ -7,24 +7,3 @@ export const findById = (items, id) => {
     }
     return match;
 };
-//     items.forEach(item => {
-//         if (item.id === id) {
-//             return item;
-//         }
-//     });
-//     return null;
-// };
-
-// const match = userClicksAsArray.find(item => item.id === )
-
-
-
-
-
-export const incrementShowCount = () => {
-    
-};
-
-export const incrementClickCount = () => {
-
-};

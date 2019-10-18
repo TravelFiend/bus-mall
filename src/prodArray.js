@@ -45,7 +45,6 @@ export default class ProductArray {
                 image.src = randomProduct2.image;
                 myRadios[1].value = randomProduct2.id;
                 const found = findById(countsArray, randomProduct2.id);
-                console.log(found);
                 if (found) {
                     found.showCount++;
                     return;

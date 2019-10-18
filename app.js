@@ -3,9 +3,10 @@ import productData from './data/products.js';
 
 const productArray = new ProductArray(productData);
 const myRadios = document.querySelectorAll('input');
+const images = document.getElementById('images');
 
 export let countsArray = [];
-
+let triesLeft = 25;
 
 // get 3 differing image sources
 
@@ -19,7 +20,10 @@ myRadios.forEach(radio => {
             }
         });
         productArray.randomPicGenerator();
+        triesLeft--;
+        if (triesLeft === 0) {
+            images.classList.add('hidden');
+        }
     });
 });
 
-console.log(countsArray);

@@ -1,7 +1,61 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: #D3FFE9;
+    font-size: 60px;
+}
+
+body {
+    background: linear-gradient(#090909, #8DDBE0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    margin-top: 30px;
+    border: 3px solid #090909;
+    background: #9BC4BC;
+    border-radius: 30px;
+}
+
 input {
     display: none;
 }
 
 input:checked+.products {
-    border: 7px solid rgb(38, 75, 38);
+    border: 7px solid #8DDBE0;
+}
+
+#images {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #4B5043;
+    border: 3px solid #090909;
+    border-radius: 30px;
+    height: 90%;
+    width: 90%;
+}
+
+img {
+    border: 3px solid #090909;
+    border-radius: 20px;
+    /* margin: 40px; */
+}
+
+.hidden {
+    visibility: hidden;
 }
