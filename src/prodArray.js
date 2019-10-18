@@ -72,7 +72,6 @@ export default class ProductArray {
                 });
             }
         });
-        console.log(countsArray);
     }
 }
 

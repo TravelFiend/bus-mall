@@ -41,8 +41,6 @@ export const renderLines = () => {
             li.textContent = `${object.name}: -- Shown count: ${object.showCount} -- Times selected:  ${object.clickCount}`;
             div2.appendChild(li);
         }
-        
     });
-
     return ul;
 };
