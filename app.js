@@ -41,11 +41,3 @@ myRadios.forEach(radio => {
         }
     });
 });
-
-
-
-// check if local storage info exists '''checked'''
-
-// if not, set local storage to (totals, counts array) '''checked'''
-
-// else add to existing

@@ -1,6 +1,3 @@
-
-
-
 export const makeChart = array => {
     const ctx = document.getElementById('product-chart').getContext('2d');
     let names = [];
@@ -65,8 +62,7 @@ export const makeTotalsChart = array => {
                 label: 'Total Times Clicked',
                 data: clounts,
                 backgroundColor: '#090909'
-            }
-            ]
+            }]
         },
         options: {
             scales: {
