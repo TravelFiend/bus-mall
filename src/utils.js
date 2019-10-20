@@ -42,7 +42,7 @@ export const renderLines = () => {
     ul.appendChild(div2);
 
 
-    getResults().forEach((object, i) => {
+    countsArray.forEach((object, i) => {
         if (i < 10){
             const li = document.createElement('li');
             li.className = 'listItem';
@@ -76,7 +76,7 @@ export const renderTotalsLines = () => {
     ul.appendChild(div2);
 
 
-    countsArray.forEach((object, i) => {
+    getResults().forEach((object, i) => {
         if (i < 10) {
             const li = document.createElement('li');
             li.className = 'listItem';

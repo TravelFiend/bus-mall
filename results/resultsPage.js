@@ -1,6 +1,6 @@
 import { makeTotalsChart } from './results.js';
-import { getResults, renderLines } from '../src/utils.js';
+import { getResults, renderTotalsLines } from '../src/utils.js';
 
-renderLines();
+renderTotalsLines();
 
 makeTotalsChart(getResults());
