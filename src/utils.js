@@ -61,7 +61,6 @@ export const renderLines = () => {
 export const renderTotalsLines = () => {
     const resultMessage = document.createElement('h2');
     resultMessage.className = 'resultsHeading';
-    resultMessage.textContent = 'RESULTS';
     results.appendChild(resultMessage);
 
     const ul = document.createElement('ul');
