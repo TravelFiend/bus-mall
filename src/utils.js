@@ -1,5 +1,6 @@
-const results = document.getElementById('results');
 import { countsArray } from '../app.js';
+
+const results = document.getElementById('results');
 
 export const findById = (items, id) => {
     let match;
@@ -43,4 +44,38 @@ export const renderLines = () => {
         }
     });
     return ul;
+};
+
+export const makeTotalsStorage = arr => {
+    let jsonResults = JSON.stringify(arr);
+    localStorage.setItem('totals', jsonResults);
+};
+
+export const getResults = () => JSON.parse(localStorage.getItem('totals'));
+
+export const setResults = (theTotals) => {
+    const jsonNew = JSON.stringify(theTotals);
+    localStorage.setItem('totals', jsonNew);
+};
+
+export const addToTotals = (theTotals, currentResults) => {
+    // let present = false;
+    theTotals.forEach(item => {
+        let currentProduct = findById(currentResults, item.id);
+        if (item.id === currentProduct.id) {
+            item.clickCount += currentProduct.clickCount;
+            item.showCount += currentProduct.showCount;
+                // present = true;
+        }
+    }
+    );
+    // if (present) {
+    //     return;
+    // } else {
+    //     const newItem = {
+    //         id: id,
+    //         quantity: 1,
+    //     };
+    //     theTotals.push(newItem);
+    // }
 };
