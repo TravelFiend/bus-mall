@@ -32,14 +32,6 @@ main {
     border-radius: 30px;
 }
 
-#main {
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    height: 90%;
-    align-items: center;
-}
-
 input {
     display: none;
 }
