@@ -16,17 +16,17 @@ export default class ProductArray {
 
     randomPicGenerator() {
         const randomProduct1 = this.getRandomProduct();
+        
         let randomProduct2 = this.getRandomProduct();
-
         while (randomProduct2 === randomProduct1) {
             randomProduct2 = this.getRandomProduct();
         }
 
         let randomProduct3 = this.getRandomProduct();
-
         while ((randomProduct3 === randomProduct1) || (randomProduct3 === randomProduct2)) {
             randomProduct3 = this.getRandomProduct();
         }
+
         imageSlots.forEach((image, i) => {
             if (i === 0) {
                 image.src = randomProduct1.image;
@@ -74,4 +74,3 @@ export default class ProductArray {
         });
     }
 }
-
