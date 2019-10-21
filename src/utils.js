@@ -95,12 +95,13 @@ export const addToTotals = (theTotals, currentResults) => {
     currentResults.forEach(c => {
         let thisResult = theTotals.find(t => t.id === c.id);
         if (thisResult === undefined) {
-            theTotals.push({
+            let newCount = {
                 id: c.id,
                 showCount: c.showCount,
                 clickCount: c.clickCount,
                 name: c.name
-            });
+            };
+            theTotals.push(newCount);
         } else {
             thisResult.clickCount += c.clickCount;
             thisResult.showCount += c.showCount;
