@@ -15,7 +15,8 @@ export default class ProductArray {
     }
 
     randomPicGenerator() {
-        const randomProduct1 = this.getRandomProduct();
+        // let pastPics = JSON.parse(localStorage.getItem('pastPics'));
+        let randomProduct1 = this.getRandomProduct();
         
         let randomProduct2 = this.getRandomProduct();
         while (randomProduct2 === randomProduct1) {
@@ -26,6 +27,64 @@ export default class ProductArray {
         while ((randomProduct3 === randomProduct1) || (randomProduct3 === randomProduct2)) {
             randomProduct3 = this.getRandomProduct();
         }
+
+        let currentArr = [randomProduct1, randomProduct2, randomProduct3];
+
+        // if (pastPics && pastPics.length) {
+        //     let newArr = currentArr.map(c => {
+        //         let foundPic = pastPics.find(p => p === c);
+        //         if (foundPic && foundPic.id) {
+        //             return self.getRandomProduct();
+        //         } else {
+        //             return c;
+        //         }
+        //     });
+        //     currentArr = newArr;
+        //     console.log({NEW: currentArr});
+            
+        // }
+        
+        // if (pastPics) {
+        //     currentArr = currentArr.map(currentPic => {
+        //         // console.log(`Old pic: ${currentPic.id}`);
+        //         let foundPic = pastPics.find(p => p.id === currentPic.id);
+
+        //         if (foundPic !== undefined) {
+        //             return self.getRandomProduct();
+
+        //         }
+                
+                // return currentPic;
+                // nested map/forEach OR .find
+                // pastPics.map(oldPic => {
+                //     // if found (copy), call getRandomProduct()
+                //     if (currentPic === oldPic){
+                //         currentPic = self.getRandomProduct();
+                //         console.log(`New pic: ${currentPic.id}`);
+                //     }
+                //     // console.log(currentPic.id);
+                //     // if not do nothing
+                //     return currentPic;
+                //     // RETURN c
+                // });
+        //     });
+        // }
+        // console.log(currentArr);
+        
+        // let accum = [];
+        // if (pastPics) {
+        //     pastPics.forEach(oldPic => {
+        //         currentArr.forEach(newPic => {
+        //             while (oldPic === newPic) {
+        //                 newPic = self.getRandomProduct();
+        //             }
+        //             console.log('no match')
+        //         });
+        //     });
+        // }
+
+        let jsonLast = JSON.stringify(currentArr);
+        localStorage.setItem('pastPics', jsonLast);
 
         imageSlots.forEach((image, i) => {
             if (i === 0) {
