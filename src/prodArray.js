@@ -15,6 +15,7 @@ export default class ProductArray {
     }
 
     randomPicGenerator() {
+        // let self = this;
         // let pastPics = JSON.parse(localStorage.getItem('pastPics'));
         let randomProduct1 = this.getRandomProduct();
         
