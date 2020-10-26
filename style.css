@@ -123,3 +123,8 @@ canvas {
     width: 80%;
     height: 500px;
 }
+
+.products {
+    max-height: 800px;
+    max-width: 90%;
+}
