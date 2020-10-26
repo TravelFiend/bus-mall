@@ -15,8 +15,12 @@ export default class ProductArray {
     }
 
     randomPicGenerator() {
-        // let self = this;
         // let pastPics = JSON.parse(localStorage.getItem('pastPics'));
+        
+        // pastPics.forEach(oldPic => {
+        //     this.products.push(oldPic);
+        // });
+
         let randomProduct1 = this.getRandomProduct();
         
         let randomProduct2 = this.getRandomProduct();
@@ -25,16 +29,26 @@ export default class ProductArray {
         }
 
         let randomProduct3 = this.getRandomProduct();
-        while ((randomProduct3 === randomProduct1) || (randomProduct3 === randomProduct2)) {
+        while ((randomProduct3 === randomProduct1) || (randomProduct3 === randomProduct2)){
             randomProduct3 = this.getRandomProduct();
         }
 
         let currentArr = [randomProduct1, randomProduct2, randomProduct3];
 
+        // for (let i = 0; i < this.products.length; i++){
+        //     if ((this.products[i] === randomProduct1) || (this.products[i] === randomProduct2) || (this.products[i] === randomProduct3)) {
+        //         this.products.splice(i, 1);
+        //         // console.log(this.products[i]);
+        //     }
+        // }
+
+        let jsonLast = JSON.stringify(currentArr);
+        localStorage.setItem('pastPics', jsonLast);
+
         // if (pastPics && pastPics.length) {
         //     let newArr = currentArr.map(c => {
-        //         let foundPic = pastPics.find(p => p === c);
-        //         if (foundPic && foundPic.id) {
+        //         let foundProduct = pastProduct.find(p => p === c);
+        //         if (foundProduct && foundProduct.id) {
         //             return self.getRandomProduct();
         //         } else {
         //             return c;
@@ -42,31 +56,18 @@ export default class ProductArray {
         //     });
         //     currentArr = newArr;
         //     console.log({NEW: currentArr});
-            
         // }
         
         // if (pastPics) {
         //     currentArr = currentArr.map(currentPic => {
-        //         // console.log(`Old pic: ${currentPic.id}`);
-        //         let foundPic = pastPics.find(p => p.id === currentPic.id);
-
-        //         if (foundPic !== undefined) {
-        //             return self.getRandomProduct();
-
-        //         }
-                
-                // return currentPic;
-                // nested map/forEach OR .find
                 // pastPics.map(oldPic => {
                 //     // if found (copy), call getRandomProduct()
                 //     if (currentPic === oldPic){
                 //         currentPic = self.getRandomProduct();
-                //         console.log(`New pic: ${currentPic.id}`);
+                //         console.log(`New pic: ${currentPic.id}`);    not logging, going wrong here
                 //     }
                 //     // console.log(currentPic.id);
-                //     // if not do nothing
                 //     return currentPic;
-                //     // RETURN c
                 // });
         //     });
         // }
@@ -77,16 +78,12 @@ export default class ProductArray {
         //     pastPics.forEach(oldPic => {
         //         currentArr.forEach(newPic => {
         //             while (oldPic === newPic) {
-        //                 newPic = self.getRandomProduct();
+        //                 newPic = self.getRandomProduct();        not logging, going wrong here
         //             }
         //             console.log('no match')
         //         });
         //     });
         // }
-
-        let jsonLast = JSON.stringify(currentArr);
-        localStorage.setItem('pastPics', jsonLast);
-
         imageSlots.forEach((image, i) => {
             if (i === 0) {
                 image.src = randomProduct1.image;
